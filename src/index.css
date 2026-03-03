@@ -1,0 +1,229 @@
+@import url('https://fonts.googleapis.com/css2?family=DM+Sans:ital,opsz,wght@0,9..40,100..1000;1,9..40,100..1000&display=swap');
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  :root {
+    /* Safe Space - Calming, serene color palette */
+    --background: 45 30% 98%;
+    --foreground: 200 15% 20%;
+
+    --card: 45 25% 97%;
+    --card-foreground: 200 15% 20%;
+
+    --popover: 45 25% 97%;
+    --popover-foreground: 200 15% 20%;
+
+    /* Sage green - hope, growth, calm */
+    --primary: 150 25% 45%;
+    --primary-foreground: 45 30% 98%;
+
+    /* Warm cream secondary */
+    --secondary: 45 20% 94%;
+    --secondary-foreground: 200 15% 25%;
+
+    /* Soft muted tones */
+    --muted: 45 15% 92%;
+    --muted-foreground: 200 10% 50%;
+
+    /* Soft lavender accent */
+    --accent: 260 30% 90%;
+    --accent-foreground: 260 25% 35%;
+
+    /* Coral for gentle emphasis */
+    --destructive: 10 60% 55%;
+    --destructive-foreground: 45 30% 98%;
+
+    --border: 45 15% 88%;
+    --input: 45 15% 88%;
+    --ring: 150 25% 45%;
+
+    --radius: 1rem;
+
+    /* Custom Safe Space tokens */
+    --safe-sage: 150 25% 45%;
+    --safe-sage-light: 150 30% 92%;
+    --safe-sage-dark: 150 25% 35%;
+    
+    --safe-cream: 45 30% 98%;
+    --safe-cream-dark: 45 20% 94%;
+    
+    --safe-lavender: 260 30% 90%;
+    --safe-lavender-dark: 260 25% 75%;
+    
+    --safe-coral: 10 60% 65%;
+    --safe-coral-light: 10 50% 92%;
+    
+    --safe-sky: 200 40% 88%;
+    --safe-sky-dark: 200 35% 70%;
+    
+    --safe-warm: 30 40% 92%;
+    
+    /* Gradients */
+    --gradient-primary: linear-gradient(135deg, hsl(150 25% 45%), hsl(150 30% 55%));
+    --gradient-calm: linear-gradient(180deg, hsl(45 30% 98%), hsl(150 30% 96%));
+    --gradient-warm: linear-gradient(135deg, hsl(45 30% 98%), hsl(30 40% 95%));
+    --gradient-lavender: linear-gradient(135deg, hsl(260 30% 95%), hsl(260 25% 88%));
+    
+    /* Shadows */
+    --shadow-soft: 0 4px 20px -4px hsl(200 15% 20% / 0.08);
+    --shadow-medium: 0 8px 30px -8px hsl(200 15% 20% / 0.12);
+    --shadow-glow: 0 0 40px hsl(150 25% 45% / 0.15);
+    
+    /* Sidebar */
+    --sidebar-background: 45 25% 97%;
+    --sidebar-foreground: 200 15% 25%;
+    --sidebar-primary: 150 25% 45%;
+    --sidebar-primary-foreground: 45 30% 98%;
+    --sidebar-accent: 150 30% 92%;
+    --sidebar-accent-foreground: 150 25% 35%;
+    --sidebar-border: 45 15% 88%;
+    --sidebar-ring: 150 25% 45%;
+  }
+
+  .dark {
+    --background: 200 15% 10%;
+    --foreground: 45 20% 95%;
+
+    --card: 200 15% 12%;
+    --card-foreground: 45 20% 95%;
+
+    --popover: 200 15% 12%;
+    --popover-foreground: 45 20% 95%;
+
+    --primary: 150 30% 55%;
+    --primary-foreground: 200 15% 10%;
+
+    --secondary: 200 12% 18%;
+    --secondary-foreground: 45 20% 95%;
+
+    --muted: 200 12% 18%;
+    --muted-foreground: 200 10% 60%;
+
+    --accent: 260 25% 25%;
+    --accent-foreground: 260 30% 85%;
+
+    --destructive: 10 55% 45%;
+    --destructive-foreground: 45 20% 95%;
+
+    --border: 200 12% 20%;
+    --input: 200 12% 20%;
+    --ring: 150 30% 55%;
+
+    --sidebar-background: 200 15% 12%;
+    --sidebar-foreground: 45 20% 90%;
+    --sidebar-primary: 150 30% 55%;
+    --sidebar-primary-foreground: 200 15% 10%;
+    --sidebar-accent: 200 12% 18%;
+    --sidebar-accent-foreground: 45 20% 95%;
+    --sidebar-border: 200 12% 20%;
+    --sidebar-ring: 150 30% 55%;
+  }
+}
+
+@layer base {
+  * {
+    @apply border-border;
+  }
+
+  body {
+    @apply bg-background text-foreground font-sans antialiased;
+    font-family: 'DM Sans', sans-serif;
+  }
+  
+  h1, h2, h3, h4, h5, h6 {
+    font-family: 'DM Sans', sans-serif;
+    @apply font-medium tracking-tight;
+  }
+}
+
+@layer utilities {
+  .gradient-primary {
+    background: var(--gradient-primary);
+  }
+  
+  .gradient-calm {
+    background: var(--gradient-calm);
+  }
+  
+  .gradient-warm {
+    background: var(--gradient-warm);
+  }
+  
+  .gradient-lavender {
+    background: var(--gradient-lavender);
+  }
+  
+  .shadow-soft {
+    box-shadow: var(--shadow-soft);
+  }
+  
+  .shadow-medium {
+    box-shadow: var(--shadow-medium);
+  }
+  
+  .shadow-glow {
+    box-shadow: var(--shadow-glow);
+  }
+  
+  .text-balance {
+    text-wrap: balance;
+  }
+  
+  .animate-float {
+    animation: float 6s ease-in-out infinite;
+  }
+  
+  .animate-breathe {
+    animation: breathe 4s ease-in-out infinite;
+  }
+  
+  .animate-fade-in {
+    animation: fadeIn 0.5s ease-out forwards;
+  }
+  
+  .animate-slide-up {
+    animation: slideUp 0.5s ease-out forwards;
+  }
+}
+
+@keyframes float {
+  0%, 100% { transform: translateY(0px); }
+  50% { transform: translateY(-10px); }
+}
+
+@keyframes breathe {
+  0%, 100% { transform: scale(1); opacity: 0.8; }
+  50% { transform: scale(1.05); opacity: 1; }
+}
+
+@keyframes fadeIn {
+  from { opacity: 0; }
+  to { opacity: 1; }
+}
+
+@keyframes slideUp {
+  from { opacity: 0; transform: translateY(20px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+/* Custom scrollbar */
+::-webkit-scrollbar {
+  width: 6px;
+}
+
+::-webkit-scrollbar-track {
+  background: hsl(var(--muted));
+  border-radius: 3px;
+}
+
+::-webkit-scrollbar-thumb {
+  background: hsl(var(--muted-foreground) / 0.3);
+  border-radius: 3px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: hsl(var(--muted-foreground) / 0.5);
+}
